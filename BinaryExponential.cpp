@@ -1,3 +1,7 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
 long long binarypower(long long a , long long b){
 	if (b == 0)
 	{//base case 
