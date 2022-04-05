@@ -15,13 +15,10 @@ int size = 10;
 
 void selectionSort(){
 
-	for (int i = 0; i < size-1; ++i)
-	{
+	for (int i = 0; i < size-1; ++i){
 		int key = i;
-		for (int j = i+1; j < size; ++j)
-		{
-			if (arr[j]<arr[key])
-			{
+		for (int j = i+1; j < size; ++j){
+			if (arr[j]<arr[key]){
 				key = j;	
 			}
 		}
@@ -32,8 +29,7 @@ void selectionSort(){
 
 int main(){
 	selectionSort();
-	for (int i = 0; i < size; ++i)
-	{
+	for (int i = 0; i < size; ++i){
 		cout<<arr[i]<<" ";
 	}
 	cout<<endl;
