@@ -1,1 +1,3 @@
 .cph
+*/*.cpp__tests
+*/*.exe

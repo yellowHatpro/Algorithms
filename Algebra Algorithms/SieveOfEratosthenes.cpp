@@ -5,6 +5,28 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
+//A standard and totally normal sieve
+sieveOfEratosthenes(int n){
+	vector<bool> prime(n+1, true);
+	prime[1] = false;
+	for (int i = 2; i < n; ++i)
+	{
+		if (prime[i]){
+			for (int j = 2*i; j <= n; j+=i)
+			{
+				prime[j] = false;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
 //This one is optimization over the actual sieve method, although it has Time Complexity of n log log(sqrt(n) + O(n)) , asymptotically same , but reduces operations noticeably.
 primesUsingSieveOfEratosthenes(int n){
 vector<bool> is_prime(n+1, true);
