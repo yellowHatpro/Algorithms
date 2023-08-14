@@ -7,7 +7,7 @@
 using namespace std;
 
 //A standard and totally normal sieve
-sieveOfEratosthenes(int n){
+void sieveOfEratosthenes(int n){
 	vector<bool> prime(n+1, true);
 	prime[1] = false;
 	for (int i = 2; i < n; ++i)
@@ -28,7 +28,7 @@ sieveOfEratosthenes(int n){
 
 
 //This one is optimization over the actual sieve method, although it has Time Complexity of n log log(sqrt(n) + O(n)) , asymptotically same , but reduces operations noticeably.
-primesUsingSieveOfEratosthenes(int n){
+void primesUsingSieveOfEratosthenes(int n){
 vector<bool> is_prime(n+1, true);
 is_prime[0] = is_prime[1] = false;
 for (int i = 2; i*i <=n; ++i){
